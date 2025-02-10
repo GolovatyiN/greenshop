@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="container">
+    <div class="close-icon"></div>
+    <div class="tabs">
+        <button class="tab login" type="button">Login</button>
+        <span class="separator">I</span>
+        <button class="tab register" type="button">Register</button>
+    </div>
+
+    <div class="form-description">
+        Enter your email and password to register.
+    </div>
+
+    <form>
+        <div class="input-group">
+            <label for="username" class="visually-hidden">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+
+            <label for="email" class="visually-hidden">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="password" class="visually-hidden">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required minlength="6">
+
+            <label for="confirm-password" class="visually-hidden">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required
+                   minlength="6">
+        </div>
+
+        <button type="submit" class="register-btn">Register</button>
+    </form>
+
+    <div class="divider">Or register with</div>
+
+    <button class="social-btn google-btn-btn">
+        <img src="logo/google.svg" alt="Google Logo" class="icon">
+        <span class="btn-text">Continue with Google</span>
+    </button>
+
+    <button class="social-btn facebook-btn">
+        <img src="logo/facebook.svg" alt="Facebook Logo" class="icon">
+        <span class="btn-text">Continue with Facebook</span>
+    </button>
+
+    <div class="footer-bar"></div>
+</div>
+</body>
+</html>

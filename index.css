@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cera Pro', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 500px;
+    background: #FFFFFF;
+    padding: 40px 20px;
+    position: relative;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.close-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+}
+
+.close-icon::before,
+.close-icon::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 1px;
+    background-color: #46A358;
+    top: 3px;
+    left: 3px;
+    transform-origin: center;
+}
+
+.close-icon::before {
+    transform: rotate(45deg);
+}
+
+.close-icon::after {
+    transform: rotate(-45deg);
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 16px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.tab.login {
+    color: #3D3D3D;
+}
+
+.tab.register {
+    color: #46A358;
+}
+
+.separator {
+    font-size: 18px;
+    font-weight: 250;
+    color: #3D3D3D;
+}
+
+.form-description {
+    color: #3D3D3D;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    margin: 20px 0 14px 0;
+    padding-left: 80px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.input-group input {
+    width: 300px;
+    height: 40px;
+    padding: 12px 14px;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #46A358;
+}
+
+input::placeholder {
+    color: #A5A5A5;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.register-btn {
+    width: 300px;
+    height: 45px;
+    background: #46A358;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    transition: background 0.3s;
+}
+
+.register-btn:hover {
+    background: #3d8b4e;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 20px 0;
+    color: #3D3D3D;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    background: #EAEAEA;
+    flex: 1;
+    max-width: 97px;
+}
+
+.social-btn {
+    width: 300px;
+    height: 40px;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: #727272;
+    margin: 10px auto;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+    gap: 9px;
+}
+
+.social-btn:hover {
+    background: #f1f1f1;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+}
+
+.btn-text {
+    display: inline-block;
+}
+
+.google-btn {
+    padding: 10px 20px;
+    gap: 9px;
+}
+
+.google-btn .icon {
+    margin-right: 9px;
+}
+
+.facebook-btn {
+    padding: 11px 20px 9px 20px;
+    gap: 4px;
+}
+
+.facebook-btn .icon {
+    margin-right: 4px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.footer-bar {
+    width: 100%;
+    height: 10px;
+    background: #46A358;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 5px 5px;
+}
