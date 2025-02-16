@@ -1,0 +1,161 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px 120px;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 150px;
+    height: 34px;
+    top: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3D3D3D;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+}
+
+nav a.active {
+    font-weight: 700;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #46A358;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    background-color: #3c8b4b; /* Темнее при наведении */
+}
+
+.header-button button img {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* Основной контейнер MainBanner */
+.main-section {
+    position: relative;
+    width: 1200px;
+    height: 450px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5F5F5;
+}
+
+/* Контент внутри MainBanner */
+.main-content {
+    width: max-content; /* Ограничиваем ширину текста */
+}
+
+/* Текст "WELCOME TO GREEN SHOP" */
+.main-content h2 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #3D3D3D;
+    margin-top: 68px;
+    margin-bottom: 7px;
+    margin-left: 43px;
+}
+
+/* Текст "LET'S MAKE A BETTER PLANET" */
+.main-content h1 {
+    font-size: 70px;
+    font-weight: 900;
+    line-height: 70px;
+    color: #3D3D3D;
+    margin-left: 40px;
+}
+
+.green {
+    color: #46A358;
+}
+
+.main-content h1 span {
+    color: #46A358;
+}
+
+/* Описание под заголовком */
+.main-content p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #727272;
+    margin-left: 43px;
+    margin-bottom: 44px;
+}
+
+/* Кнопка "Shop Now" */
+.shop-button {
+    width: 140px;
+    height: 40px;
+    background-color: #46A358;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 11px 27px 9px 26px; /* Паддинги */
+    margin-left: 41px; /* Отступ слева */
+    margin-bottom: 85px; /* Расстояние до конца блока */
+}
+
+/* Эффект при наведении */
+.shop-button:hover {
+    background-color: #3A8F47;
+}
+
+.hero-images {
+    position: absolute;
+    bottom: 0; /* Нижний отступ */
+    left: 48%; /* Смещение всего блока изображений */
+    display: flex;
+    align-items: flex-end; /* Выровняем по нижнему краю */
+}
+
+.plant-left {
+    width: 135px;
+    height: 135px;
+    position: relative;
+    top: -16px;
+    left: 190px;
+}
+
+.plant-right {
+    width: 507px;
+    height: 450px;
+    position: relative;
+    top: 1px;
+    left: 0;
+}
+
