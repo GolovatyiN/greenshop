@@ -71,13 +71,13 @@ nav ul {
     position: relative;
     width: 100%;
     max-width: 1200px;
-    height: 450px; /* Увеличил высоту, чтобы текст не зажимался */
+    height: 450px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #F5F5F5;
-    padding: 50px 80px; /* Добавил больше отступов */
+    padding: 50px 80px;
     box-sizing: border-box;
 }
 
@@ -155,7 +155,7 @@ nav ul {
 
 .hero-images {
     position: absolute;
-    right: 0; /* Подвинуть ближе к центру */
+    right: 0;
     bottom: 0;
     display: flex;
     align-items: flex-end;
@@ -166,8 +166,8 @@ nav ul {
     width: 135px;
     height: 135px;
     position: absolute;
-    bottom: 15px; /* Поднимаем над низом */
-    left: 55px; /* Двигаем ближе к большому растению */
+    bottom: 15px;
+    left: 55px;
 }
 
 
@@ -371,11 +371,222 @@ nav ul {
     color: white;
 }
 
+.main-information {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 146px 0;
+}
 
+.information {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 28px;
+}
 
+.info-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 586px;
+    height: 250px;
+    background-color: #FBFBFB;
+    padding: 37px 30px 9px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
 
+.plant-image {
+    width: 287px;
+    height: 287px;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+}
 
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    width: calc(100% - 287px);
+}
 
+.text-content h4 {
+    font-family: "Sera Pro", sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 24px;
+    color: #3D3D3D;
+    max-width: 260px;
+    word-wrap: break-word;
+    margin-bottom: 9px;
+}
 
+.text-content p {
+    font-family: "Sera Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #727272;
+    margin-bottom: 25px;
+    max-width: 292px;
+    word-wrap: break-word;
+    white-space: normal;
+}
 
+.find-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #46A358;
+    color: #FFFFFF;
+    font-family: "Sera Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 140px;
+    height: 40px;
+    padding: 11px 27px 9px 28px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
 
+.find-more:hover {
+    background-color: #3c8b4b;
+}
+
+.find-more .arrow {
+    margin-left: 2px;
+    width: 16px;
+    height: auto;
+}
+
+.blog-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.blog-title {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 16px;
+    color: #3D3D3D;
+    margin-bottom: 15px;
+}
+
+.blog-description {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #727272;
+    margin-bottom: 35px;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 42px;
+}
+
+.blog-card {
+    width: 268px;
+    height: 362px;
+    background-color: #FFFFFF;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.blog-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.blog-image {
+    width: 268px;
+    height: 195px;
+    object-fit: cover;
+}
+
+.blog-content {
+    width: 242px;
+    height: 146px;
+    padding: 9px 15px 11px 12px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.blog-meta {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #46A358;
+    margin-bottom: 4px;
+}
+
+.blog-title-card {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #3D3D3D;
+    margin-bottom: 4px;
+}
+
+.blog-text {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #727272;
+    margin-bottom: 9px;
+}
+
+.read-more {
+    font-family: 'Cera Pro', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.read-more a {
+    text-decoration: none !important;
+    color: #3D3D3D !important;
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.read-more:hover a {
+    color: #46A358 !important;
+}
+
+.read-arrow {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(80%) contrast(90%);
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.read-more:hover .read-arrow {
+    filter: brightness(0) saturate(100%) invert(47%) sepia(64%) saturate(518%) hue-rotate(86deg) brightness(91%) contrast(92%);
+}
