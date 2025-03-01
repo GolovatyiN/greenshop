@@ -81,7 +81,7 @@ nav ul {
     box-sizing: border-box;
 }
 
-.main-content{
+.main-content {
     background-color: #F5F5F5;
     max-width: 1200px;
     width: 100%;
@@ -176,18 +176,18 @@ nav ul {
     height: 450px;
 }
 
-.main{
+.main {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
     justify-content: start;
 }
 
-.sidebar{
+.sidebar {
     margin-right: 50px;
 }
 
-.sidebar2{
+.sidebar2 {
     max-width: 310px;
     height: 774px;
     background: #FBFBFB;
@@ -195,14 +195,14 @@ nav ul {
     padding: 18px 14px;
 }
 
-.main-category{
+.main-category {
     font-family: 'Cera Pro', sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 16px;
 }
 
-.sidebar-list{
+.sidebar-list {
     padding: 24px 12px;
     height: 360px;
     display: flex;
@@ -210,7 +210,7 @@ nav ul {
     gap: 20px;
 }
 
-.sidebar-text{
+.sidebar-text {
     font-family: 'Cera Pro', sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -224,27 +224,27 @@ nav ul {
     transition: color 0.3s ease-in-out;
 }
 
-.banner{
+.banner {
     max-width: 310px;
     object-fit: cover;
     height: 470px;
 }
 
-.header2{
+.header2 {
     margin-top: 26px;
 }
 
-.filter{
+.filter {
     display: flex;
     justify-content: space-between;
 }
 
-.head-img{
+.head-img {
     display: flex;
     gap: 40px;
 }
 
-.head-img{
+.head-img {
     font-family: 'Cera Pro', sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -253,7 +253,7 @@ nav ul {
     width: 280px;
 }
 
-.filter-text{
+.filter-text {
     display: inline-block;
     position: relative;
     text-decoration: none;
@@ -282,7 +282,7 @@ nav ul {
     background-color: #46A358;
 }
 
-.filter-dropdown{
+.filter-dropdown {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -292,42 +292,79 @@ nav ul {
     line-height: 16px;
 }
 
-.content{
+.content {
     display: flex;
     flex-wrap: wrap;
     gap: 70px 30px;
     margin-top: 30px;
 }
 
-.card{
-    border: 1px solid #EAEAEA;
-    border-radius: 0;
-    width: 258px;
-    height: 350px;
-}
-
 .card {
-    border: 1px solid #EAEAEA;
-    border-radius: 0;
     width: 258px;
     height: 350px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
 }
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 258px;
+    height: 1px;
+    background-color: #46A358;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.flower-img{
-    background-color: #FBFBFB;
-    border: 1px;
-    border-radius: 10px;
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover .icon-cards {
+    display: flex;
+}
+
+.icon-cards {
+    display: none;
+    width: 125px;
+    height: 35px;
+    gap: 10px;
+    margin: -17px auto 19px;
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    justify-content: center;
+}
+
+
+.icon-card {
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+
+.icon-card img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.flower-img {
     width: 258px;
     height: 300px;
 }
 
-.flower-name{
+.flower-name {
     font-family: 'Cera Pro', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -335,7 +372,7 @@ nav ul {
     color: #3D3D3D;
 }
 
-.price{
+.price {
     font-family: 'Cera Pro', sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -344,15 +381,16 @@ nav ul {
     margin-top: 6px;
 }
 
-.pagination{
+.pagination {
     display: flex;
     justify-content: flex-end;
     max-width: 1200px;
     margin: 0 auto;
     gap: 10px;
+    padding-top: 90px;
 }
 
-.counter{
+.counter {
     font-family: 'Cera Pro', sans-serif;
     font-weight: 300;
     font-size: 18px;
