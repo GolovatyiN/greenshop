@@ -8,6 +8,7 @@ header {
     max-width: 1200px;
     padding: 30px 120px 12px;
     margin: 0 auto;
+    height: 53px;
 }
 
 .logo img {
@@ -17,28 +18,161 @@ header {
 }
 
 nav ul {
-    display: flex;
+    height: 45px;
     list-style: none;
-    gap: 50px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 47px;
 }
 
-nav a {
+nav ul > li {
+    position: relative;
+}
+
+nav ul > li > a {
     text-decoration: none;
-    color: #3D3D3D;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-
+    color: #3D3D3D;
+    padding: 8px 25px;
+    display: block;
 }
 
-nav a.active {
+nav ul ul {
+    min-width: 180px;
+    white-space: nowrap;
+}
+
+nav ul > li > a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: #46A358;
+    margin-top: 25px;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul > li > ul > li > a::after {
+    display: none;
+}
+
+nav ul > li:hover > a {
     font-weight: 700;
 }
 
-nav ul {
+nav ul > li:hover > a::after {
+    transform: scaleX(1);
+}
+
+nav ul > li > ul {
+    position: absolute;
+    top: 60px;
+    left: -30%;
+    width: 188px;
+    height: 143px;
+    background: #EDF6EE;
+    padding: 0;
     list-style: none;
+    display: none;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul > li:hover > ul {
+    display: block;
+}
+
+nav ul > li > ul > li {
+    position: relative;
+    height: 35px;
+    padding: 7px 14px 8px;
     display: flex;
-    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.3s;
+    width: 188px;
+    box-sizing: border-box;
+/
+}
+
+nav ul > li > ul > li > a {
+    font-family: 'Cera Pro', sans-serif;
+    flex-grow: 1;
+    font-size: 16px;
+    height: 20px;
+    font-weight: 400;
+    color: #3D3D3D;
+    display: block;
+    width: 100%;
+    padding: 7px 14px 8px;
+}
+
+nav ul > li > ul > li:hover {
+    background: #1A712A;
+}
+
+nav ul > li > ul > li:hover > a {
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.arrow-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0) saturate(100%) invert(25%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
+}
+
+nav ul > li > ul > li:hover .arrow-icon {
+    transform: translateY(-50%) rotate(180deg);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+nav ul > li > ul > li > ul {
+    position: absolute;
+    top: -105px;
+    left: 190px;
+    width: 178px;
+    height: 215px;
+    background: #EDF6EE;
+    padding: 0;
+    list-style: none;
+    display: none;
+    z-index: 101;
+}
+
+nav ul > li > ul > li:hover > ul {
+    display: block;
+}
+
+nav ul > li > ul > li > ul > li {
+    font-family: 'Cera Pro', sans-serif;
+    width: 178px;
+    height: 35px;
+    padding: 7px 14px 8px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul > li > ul > li > ul > li > a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #3D3D3D;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+nav ul > li > ul > li > ul > li > a::after {
+    content: none !important;
 }
 
 .login-button {
@@ -302,9 +436,19 @@ nav ul {
 .card {
     width: 258px;
     height: 350px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
 }
+
+.image-container {
+    width: 258px;
+    height: 300px;
+    background-color: #FBFBFB;
+    position: relative;
+}
+
 
 .card::before {
     content: "";
@@ -315,6 +459,7 @@ nav ul {
     height: 1px;
     background-color: #46A358;
     opacity: 0;
+    z-index: 10;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -324,21 +469,21 @@ nav ul {
 }
 
 .card:hover .icon-cards {
-    display: flex;
+    opacity: 1;
 }
 
 .icon-cards {
-    display: none;
+    position: absolute;
+    top: 258px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
     width: 125px;
     height: 35px;
-    gap: 10px;
-    margin: -17px auto 19px;
-    position: absolute;
-    top: 80%;
-    left: 25%;
-    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
-
 
 .icon-card {
     width: 35px;
@@ -352,16 +497,18 @@ nav ul {
     cursor: pointer;
 }
 
-
 .icon-card img {
     width: 20px;
     height: 20px;
 }
 
-
 .flower-img {
-    width: 258px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .flower-name {
@@ -370,6 +517,10 @@ nav ul {
     font-size: 16px;
     line-height: 16px;
     color: #3D3D3D;
+    margin-top: 12px;
+    text-align: left;
+    width: 100%;
+    padding-left: 10px;
 }
 
 .price {
@@ -379,6 +530,9 @@ nav ul {
     line-height: 16px;
     color: #46A358;
     margin-top: 6px;
+    text-align: left;
+    width: 100%;
+    padding-left: 10px;
 }
 
 .pagination {
