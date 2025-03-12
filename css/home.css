@@ -1,29 +1,36 @@
 header {
     font-family: 'Cera Pro', sans-serif;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    width: 100%;
     max-width: 1200px;
-    padding: 30px 120px 12px;
     margin: 0 auto;
     height: 53px;
+    margin-top: 25px;
+
+}
+
+.pre-header{
+    display: flex;
+    width: 1200px;
+}
+
+.logo{
+    margin-right: 209px;
 }
 
 .logo img {
     width: 150px;
     height: 34px;
-    top: 1px;
 }
 
 nav ul {
+    display: flex;
     height: 45px;
     list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 47px;
+    margin-right: 231px;
+    margin-top: 2px;
 }
 
 nav ul > li {
@@ -31,12 +38,13 @@ nav ul > li {
 }
 
 nav ul > li > a {
+    height: 40px;
     text-decoration: none;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     color: #3D3D3D;
-    padding: 8px 25px;
+    padding: 0 25px 30px;
     display: block;
 }
 
@@ -70,7 +78,7 @@ nav ul > li:hover > a::after {
 
 nav ul > li > ul {
     position: absolute;
-    top: 60px;
+    top: 50px;
     left: -30%;
     width: 188px;
     height: 143px;
@@ -96,7 +104,6 @@ nav ul > li > ul > li {
     transition: background 0.3s;
     width: 188px;
     box-sizing: border-box;
-/
 }
 
 nav ul > li > ul > li > a {
@@ -106,9 +113,15 @@ nav ul > li > ul > li > a {
     height: 20px;
     font-weight: 400;
     color: #3D3D3D;
-    display: block;
-    width: 100%;
+    display: flex;
+    gap: 84px;
     padding: 7px 14px 8px;
+    svg{
+        stroke: #3D3D3D;
+        transform: rotate(0deg);
+        transition: all .3s ease-in-out;
+    }
+
 }
 
 nav ul > li > ul > li:hover {
@@ -118,15 +131,21 @@ nav ul > li > ul > li:hover {
 nav ul > li > ul > li:hover > a {
     font-weight: 700;
     color: #FFFFFF;
+    svg{
+        stroke: #FFFFFF;
+        transform: rotate(180deg);
+        transition: all .3s ease-in-out;
+    }
+
 }
 
 .arrow-icon {
+    width: 7px;
+    height: 10px;
     position: absolute;
     right: 14px;
     top: 50%;
     transform: translateY(-50%);
-    width: 6px;
-    height: 10px;
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: brightness(0) saturate(100%) invert(25%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
 }
@@ -175,29 +194,70 @@ nav ul > li > ul > li > ul > li > a::after {
     content: none !important;
 }
 
-.login-button {
-    font-family: 'Cera Pro', sans-serif;
+
+
+.header-button {
+    width: 100px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 10px 20px;
+}
+
+.login-button {
+    width: 100px;
+    display: flex;
+    align-items: center;
     background-color: #46A358;
-    color: white;
-    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Cera Pro', sans-serif;
+    font-weight: 500;
     font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: 0.3s;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.login-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 17px;
+    margin-right: 4px;
+    fill: white;
+}
+
+.login-text {
+    line-height: 35px;
+    padding-left: 0;
 }
 
 .login-button:hover {
-    background-color: #3c8b4b;
+    background-color: #3d8c4c;
+    transform: none;
 }
 
-.header-button button img {
+.search {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding-bottom: 14px;
+}
+
+.search svg {
+    display: block;
+    flex-shrink: 0;
+}
+
+.search svg:first-child {
     width: 20px;
     height: 20px;
+}
+
+.search svg:last-child {
+    width: 20px;
+    height: 24px;
+    overflow: visible;
 }
 
 
@@ -220,22 +280,23 @@ nav ul > li > ul > li > ul > li > a::after {
     max-width: 1200px;
     width: 100%;
     height: 450px;
-    margin-left: -75px;
+    margin-left: -82px;
+    margin-top: 19px;
 }
 
 .main-content h2 {
     font-family: 'Cera Pro', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     line-height: 16px;
     color: #3D3D3D;
-    margin: 68px 43px 7px;
+    margin: 68px 46px 7px;
 }
 
 
 .main-content h1 {
     font-family: 'Cera Pro', sans-serif;
-    font-size: 70px;
+    font-size: 65px;
     font-weight: 900;
     line-height: 70px;
     color: #3D3D3D;
@@ -249,6 +310,7 @@ nav ul > li > ul > li > ul > li > a::after {
 .main-content h1 span {
     font-family: 'Cera Pro', sans-serif;
     color: #46A358;
+    margin-left: -3px;
 }
 
 
@@ -319,14 +381,15 @@ nav ul > li > ul > li > ul > li > a::after {
 
 .sidebar {
     margin-right: 50px;
+    margin-top: 25px;
 }
 
 .sidebar2 {
     max-width: 310px;
     height: 774px;
     background: #FBFBFB;
-    margin-top: 26px;
     padding: 18px 14px;
+    margin-top: 30px;
 }
 
 .main-category {
@@ -337,11 +400,11 @@ nav ul > li > ul > li > ul > li > a::after {
 }
 
 .sidebar-list {
-    padding: 24px 12px;
+    padding: 5px 12px;
     height: 360px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+
 }
 
 .sidebar-text {
@@ -371,14 +434,12 @@ nav ul > li > ul > li > ul > li > a::after {
 .filter {
     display: flex;
     justify-content: space-between;
+    margin-top: 29px;
 }
 
 .head-img {
     display: flex;
     gap: 40px;
-}
-
-.head-img {
     font-family: 'Cera Pro', sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -495,6 +556,11 @@ nav ul > li > ul > li > ul > li > a::after {
     justify-content: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    color: #3D3D3D;
+
+    &:hover{
+color: #46A358;
+    }
 }
 
 .icon-card img {
@@ -541,7 +607,8 @@ nav ul > li > ul > li > ul > li > a::after {
     max-width: 1200px;
     margin: 0 auto;
     gap: 10px;
-    padding-top: 90px;
+    margin-top: 90px;
+
 }
 
 .counter {
@@ -568,7 +635,7 @@ nav ul > li > ul > li > ul > li > a::after {
     justify-content: center;
     margin: 0 auto;
     max-width: 1200px;
-    padding: 146px 0;
+    margin-top: 129px;
 }
 
 .information {
@@ -658,14 +725,12 @@ nav ul > li > ul > li > ul > li > a::after {
 
 .find-more .arrow {
     margin-left: 2px;
-    width: 16px;
-    height: auto;
 }
 
 .blog-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 0;
+    margin-top: 153px;
     text-align: center;
 }
 
@@ -684,13 +749,12 @@ nav ul > li > ul > li > ul > li > a::after {
     font-weight: 400;
     line-height: 24px;
     color: #727272;
-    margin-bottom: 35px;
+    margin-bottom: 27px;
 }
 
 .blog-container {
     display: flex;
-    justify-content: space-between;
-    gap: 42px;
+    gap: 45px;
 }
 
 .blog-card {
@@ -719,7 +783,6 @@ nav ul > li > ul > li > ul > li > a::after {
     height: 146px;
     padding: 9px 15px 11px 12px;
     text-align: left;
-    margin: 0 auto;
 }
 
 .blog-meta {
@@ -756,6 +819,10 @@ nav ul > li > ul > li > ul > li > a::after {
     gap: 3px;
     cursor: pointer;
     transition: color 0.3s ease-in-out;
+    >svg{
+        transform: translateX(0);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
 }
 
 .read-more a {
@@ -772,41 +839,46 @@ nav ul > li > ul > li > ul > li > a::after {
     color: #46A358 !important;
 }
 
-.read-arrow {
-    width: 16px;
-    height: 16px;
-    filter: brightness(0) saturate(100%) invert(20%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(80%) contrast(90%);
-    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
 
-.read-more:hover .read-arrow {
-    filter: brightness(0) saturate(100%) invert(47%) sepia(64%) saturate(518%) hue-rotate(86deg) brightness(91%) contrast(92%);
+.read-more:hover{
+    >svg{
+        color: #46A358 ;
+        transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transform: translateX(3px);
+    }
 }
 
 footer {
     width: 1200px;
-    height: 610px;
-    background: #FBFBFB;
-    margin: 100px auto 13px auto;
+    margin: 105px auto ;
     padding: 0;
     display: flex;
     flex-direction: column;
 }
 
+.footer-container{
+    background: #FBFBFB;
+    margin: 0 auto;
+    height: 573px;
+}
+
 .footer-top {
+    margin-left: 25px;
     display: flex;
-    justify-content: space-between;
-    padding: 24px 25px;
-    align-items: flex-start;
+    gap: 30px;
+    height: 250px;
+    align-items: center;
 }
 
 .footer-box {
-    width: 204px;
-    height: 202px;
+    width: 235px;
     display: flex;
     flex-direction: column;
     align-items: start;
     text-align: center;
+    >svg{
+        margin-bottom: 15px;
+    }
 }
 
 .footer-box:not(:last-child) {
@@ -816,16 +888,18 @@ footer {
 .footer-box:nth-child(1) {
     padding-right: 30px;
     border-right: 1px solid rgba(70, 163, 88, 0.1);
+    >svg{
+        margin-bottom: 12px;
+    }
 }
 
 .footer-box:nth-child(2) {
-    padding-left: 30px;
+    width: 235px;
     padding-right: 30px;
     border-right: 1px solid rgba(70, 163, 88, 0.1);
 }
 
 .footer-box:nth-child(3) {
-    padding-left: 30px;
     border-right: none !important;
 }
 
@@ -863,14 +937,14 @@ footer {
     font-size: 13px;
     line-height: 22px;
     color: #727272;
+    width: 205px;
+    height: 66px;
     text-align: start;
 }
 
 .newsletter {
     width: 354px;
     height: 202px;
-    margin-left: 62px;
-    margin-right: 25px;
     text-align: left;
 }
 
@@ -880,7 +954,8 @@ footer {
     font-size: 18px;
     line-height: 16px;
     color: #3D3D3D;
-    margin-bottom: 25px;
+    margin-bottom: 16px;
+    margin-top: 12px;
 }
 
 .newsletter form {
@@ -893,11 +968,11 @@ footer {
 }
 
 .newsletter input {
-    flex-grow: 1;
-    height: 100%;
-    padding-left: 10px;
+    box-sizing: border-box;
+    padding: 12px 11px;
     border: none;
-    font-size: 14px;
+    width: 269px;
+    height: 40px;
 }
 
 .newsletter button {
@@ -930,10 +1005,11 @@ footer {
 .footer-middle {
     width: 1200px;
     height: 88px;
+    margin: 0 auto;
     background: linear-gradient(to right, #EDF6EF, #52C368);
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    gap: 155px;
     padding: 0 22px;
     box-sizing: border-box;
     overflow: hidden;
@@ -942,7 +1018,6 @@ footer {
 .footer-middle .logo img {
     width: 150px;
     height: 34px;
-    margin-right: 155px;
 }
 
 .footer-middle .info-wrapper {
@@ -979,47 +1054,33 @@ footer {
     text-align: left;
 }
 
-.footer-middle .address {
-    margin-left: 0;
-}
-
-.footer-middle .email {
-    margin-left: 155px;
-}
-
-.footer-middle .phone {
-    margin-left: 155px;
-    margin-right: 22px;
-}
-
-.footer-middle .address img {
+.footer-middle .address svg {
     margin-right: 9px;
 }
 
-.footer-middle .email img {
+.footer-middle .email svg {
     margin-right: 10px;
 }
 
-.footer-middle .phone img {
+.footer-middle .phone svg {
     margin-right: 8px;
 }
 
-.footer-middle .info-block img {
+.footer-middle .info-block svg {
     transition: transform 0.3s ease-in-out;
 }
 
-.footer-middle .info-block:hover img {
+.footer-middle .info-block:hover svg {
     transform: translateY(-5px);
 }
 
 .footer-bottom {
     position: relative;
-    padding-bottom: 51px;
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
     width: 1200px;
-    margin: 33px auto 29px;
+    height: 203px;
+    margin: 33px auto 2px;
     flex-wrap: nowrap;
 }
 
@@ -1053,9 +1114,6 @@ footer {
     line-height: 30px;
 }
 
-.footer-section ul li {
-    margin-bottom: 8px;
-}
 
 .footer-section ul li a {
     font-family: 'Cera Pro', sans-serif;
@@ -1085,40 +1143,34 @@ footer {
 .help-guide {
     width: 100px;
     height: 174px;
-    margin-right: 129px;
+    margin-right: 166px;
 }
 
 .categories {
     width: 100px;
     height: 174px;
-    margin-right: 173px;
+    margin-right: 166px;
 }
 
 .social-media {
     width: 224px;
     height: 154px;
-    margin-right: 173px;
-    margin-bottom: 33px;
 }
 
 .social-icons {
     display: flex;
     gap: 10px;
     margin-top: 20px;
+    >svg{
+        transition: transform 0.3s ease, filter 0.3s ease;
+        cursor: pointer;
+    }
 }
 
-.social-icons img {
-    width: 30px;
-    height: 30px;
-}
-
-.social-icons img {
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.social-icons img:hover {
+.social-icons svg:hover {
     transform: scale(1.2);
     filter: brightness(1.2) saturate(1.5) hue-rotate(10deg);
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .we-accept-title {
@@ -1134,6 +1186,10 @@ footer {
     background-color: transparent;
 }
 
+.text{
+    height: 30px;
+}
+
 .footer-copy {
     font-family: "Cera Pro", sans-serif;
     font-weight: 400;
@@ -1142,5 +1198,11 @@ footer {
     text-align: center;
     color: #3D3D3D;
     margin-top: 6px;
-    margin-bottom: 22px;
+    margin-bottom: 23px;
+}
+
+.login-button img {
+    width: 20px;
+    height: 20px;
+    margin: 7px 63px 8px 17px;
 }
