@@ -16,7 +16,11 @@ body {
 }
 
 .container {
-    height: 656px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 800px;
     width: 500px;
     background: #FFFFFF;
     padding: 40px 20px;
@@ -46,8 +50,6 @@ body {
     width: 12px;
     height: 1px;
     background-color: #46A358;
-    top: 3px;
-    left: 3px;
     transform-origin: center;
 }
 
@@ -97,7 +99,7 @@ body {
     font-weight: 400;
     line-height: 16px;
     text-align: left;
-    margin: 20px 0 14px 0;
+    margin: 20px 132px 14px 0;
     padding-left: 80px;
 }
 
@@ -132,6 +134,90 @@ input::placeholder {
     line-height: 16px;
 }
 
+.group {
+    margin-top: 30px;
+}
+
+.checkbox-wrapper-24 .checkbox {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.checkbox-wrapper-24 label {
+    color: #333;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-wrapper-24 label span {
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    transform-origin: center;
+    border: 2px solid #333;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-left: -5px;
+    margin-right: 5px;
+    transition: background-color 150ms 200ms, transform 350ms cubic-bezier(0.78, -1.22, 0.17, 1.89);
+}
+
+.checkbox-wrapper-24 label span:before {
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: #333;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 13px;
+    left: 9px;
+    transition: width 50ms ease 50ms;
+    transform-origin: 0 0;
+}
+
+.checkbox-wrapper-24 label span:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: #333;
+    position: absolute;
+    transform: rotate(305deg);
+    top: 16px;
+    left: 10px;
+    transition: width 50ms ease;
+    transform-origin: 0 0;
+}
+
+.checkbox-wrapper-24 input[type=checkbox]:checked + label span {
+    background-color: #46A358;;
+    transform: scale(1.25);
+}
+
+.checkbox-wrapper-24 input[type=checkbox]:checked + label span:after {
+    width: 10px;
+    background: #fff;
+    transition: width 150ms ease 100ms;
+}
+
+.checkbox-wrapper-24 input[type=checkbox]:checked + label span:before {
+    width: 5px;
+    background: #fff;
+    transition: width 150ms ease 100ms;
+}
+
+.checkbox-wrapper-24 input[type=checkbox] {
+    display: none;
+}
+
 .register-btn {
     width: 300px;
     height: 45px;
@@ -162,6 +248,7 @@ input::placeholder {
     font-size: 13px;
     font-weight: 400;
     line-height: 16px;
+    width: 100%;
 }
 
 .divider::before,
@@ -246,4 +333,142 @@ input::placeholder {
     bottom: 0;
     left: 0;
     border-radius: 0 0 5px 5px;
+}
+
+.password-container {
+    position: relative;
+    width: 300px;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.password-icon {
+    display: none;
+}
+
+.toggle-password .hide-icon {
+    display: block;
+}
+
+.toggle-password .show-icon {
+    display: none;
+}
+
+.toggle-password.show-password .hide-icon {
+    display: none;
+}
+
+.toggle-password.show-password .show-icon {
+    display: block;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    fill: #aaa;
+    transition: fill 0.3s ease;
+}
+
+.toggle-password use {
+    display: block;
+}
+
+.toggle-password svg {
+    width: 20px;
+    height: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.radio-wrapper-15 {
+    margin-bottom: 10px;
+}
+
+.radio-wrapper-15 p {
+    margin-bottom: 10px;
+}
+
+.radio-wrapper-15 input[type=radio]:after {
+    -moz-transition: all 0.25s cubic-bezier(0.75, 0.01, 0.48, 2);
+    -o-transition: all 0.25s cubic-bezier(0.75, 0.01, 0.48, 2);
+    -webkit-transition: all 0.25s cubic-bezier(0.75, 0.01, 0.48, 2);
+    transition: all 0.25s cubic-bezier(0.75, 0.01, 0.48, 2);
+}
+
+.radio-wrapper-15 input[type=radio]:before {
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.radio-wrapper-15 input[type=radio] {
+    position: relative;
+}
+
+.radio-wrapper-15 input[type=radio]:before,
+.radio-wrapper-15 input[type=radio]:after {
+    content: "";
+    position: absolute;
+}
+
+.radio-wrapper-15 input[type=radio]:before {
+    height: 100%;
+}
+
+.radio-wrapper-15 input[type=radio] {
+    border-radius: 30px;
+}
+
+.radio-wrapper-15 input[type=radio]:before {
+    width: 100%;
+    border-radius: 30px;
+    background-color: #2c3f52;
+    box-shadow: 0 0 0 1px #2c3f52;
+}
+
+.radio-wrapper-15 input[type=radio]:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background-color: #15202a;
+    -ms-transform: scale(0, 0);
+    transform: scale(0, 0);
+}
+
+.radio-wrapper-15 input[type=radio]:checked:after {
+scale(0.75, 0.75);
+    -ms-transform: scale(0.75, 0.75);
+    transform: scale(0.75, 0.75);
+}
+
+.radio-wrapper-15 input[type=radio]:checked:before {
+    background-color: #85ff7a;
+    box-shadow: 0 0 0 1px #85ff7a;
+}
+
+.radio-wrapper-15 input[type=radio]:checked:before {
+    background-color: #85ff7a;
+    box-shadow: 0 0 0 1px #85ff7a;
+}
+
+.radio-wrapper-15 * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.radio-wrapper-15 input[type=radio] {
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
 }

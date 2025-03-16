@@ -6,6 +6,24 @@
     <title>Registration Form</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/index.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".toggle-password").forEach(function (eyeIcon) {
+                eyeIcon.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const input = document.getElementById(this.dataset.target);
+
+                    if (input.type === "password") {
+                        input.type = "text";
+                        this.classList.add("show-password");
+                    } else {
+                        input.type = "password";
+                        this.classList.remove("show-password");
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
 <div class="container">
@@ -29,25 +47,59 @@
             <input type="email" id="email" name="email" placeholder="Enter your email address" required>
 
             <label for="password" class="visually-hidden">Password</label>
-            <input type="password" id="password" name="password" placeholder="Password" required minlength="6">
+            <div class="password-container">
+                <input type="password" id="password" name="password" placeholder="Password" required minlength="6">
+                <svg class="toggle-password" data-target="password" width="20" height="20">
+                    <use href="/sprite.svg#hide" class="password-icon hide-icon"></use>
+                    <use href="/sprite.svg#show" class="password-icon show-icon"></use>
+                </svg>
+            </div>
 
             <label for="confirm-password" class="visually-hidden">Confirm Password</label>
-            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required
-                   minlength="6">
+            <div class="password-container">
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password"
+                       required
+                       minlength="6">
+                <svg class="toggle-password" data-target="confirm-password" width="20" height="20">
+                    <use href="/sprite.svg#hide" class="password-icon hide-icon"></use>
+                    <use href="/sprite.svg#show" class="password-icon show-icon"></use>
+                </svg>
+            </div>
         </div>
+        <div class="group">
+            <div class="radio-wrapper-15">
+                <p>Select your gender:</p>
+                <label>
+                    <span><input id="example-15-male" type="radio" name="radio-examples"></span> Male
+                </label>
+                <label>
+                    <span><input id="example-15-female" type="radio" name="radio-examples"></span> Female
+                </label>
+            </div>
 
+            <div class="checkbox-wrapper-24">
+                <input type="checkbox" id="check-24" name="check" value=""/>
+                <label for="check-24">
+                    <span> </span>I agree to the terms and conditions
+                </label>
+            </div>
+        </div>
         <button type="submit" class="register-btn">Register</button>
     </form>
 
     <div class="divider">Or register with</div>
 
     <button class="social-btn google-btn-btn">
-        <svg class="icon" width="20" height="20"><use href="./sprite.svg#google"></use></svg>
+        <svg class="icon" width="20" height="20">
+            <use href="./sprite.svg#google"></use>
+        </svg>
         <span class="btn-text">Continue with Google</span>
     </button>
 
     <button class="social-btn facebook-btn">
-        <svg class="icon" width="20" height="20"><use href="./sprite.svg#facebook1"></use></svg>
+        <svg class="icon" width="20" height="20">
+            <use href="./sprite.svg#facebook1"></use>
+        </svg>
         <span class="btn-text">Continue with Facebook</span>
     </button>
 
