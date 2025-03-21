@@ -389,6 +389,13 @@ nav ul > li > ul > li > ul > li > a::after {
     margin-right: -150px;
 }
 
+@media (max-width: 556px) {
+    .plant-left {
+        display: none;
+    }
+
+}
+
 
 .plant-right {
     width: 507px;
