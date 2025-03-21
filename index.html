@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scale=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Green Shop</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/reset.css">
@@ -21,7 +22,8 @@
                 <use href="./sprite.svg#home"></use>
             </svg>
         </div>
-        <nav>
+
+        <nav class="navigation">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Shop</a></li>
@@ -60,11 +62,28 @@
             </ul>
         </nav>
 
+        <div class="burger">
+            <input type="checkbox" id="menyAvPaa">
+            <label id="burger" for="menyAvPaa">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+            <nav id="meny">
+                <ul>
+                    <li><a class="name-list" href="#">Home</a></li>
+                    <li><a class="name-list" href="#">Shop</a></li>
+                    <li><a class="name-list" href="#">Plant Care</a></li>
+                    <li><a class="name-list" href="#">Blogs</a></li>
+                </ul>
+            </nav>
+        </div>
+
         <div class="search">
-            <svg width="20" height="20">
+            <svg class="sh" width="20" height="20">
                 <use href="./sprite.svg#Vector"></use>
             </svg>
-            <svg width="29" height="27">
+            <svg class="sh" width="29" height="27">
                 <use href="./sprite.svg#Group1"></use>
             </svg>
             <a href="register.html" class="login-button">
@@ -545,6 +564,7 @@
 
 
         <div class="footer-bottom">
+            <div class="help-counter">
             <div class="footer-section my-account">
                 <h4>My Account</h4>
                 <ul>
@@ -577,6 +597,7 @@
                     <li><a href="#">Accessories</a></li>
                 </ul>
             </div>
+            </div>
 
             <div class="footer-section social-media">
                 <h4>Social Media</h4>
@@ -607,6 +628,7 @@
         <p class="footer-copy">© 2021 GreenShop. All Rights Reserved.</p>
     </div>
 </footer>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
