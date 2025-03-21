@@ -868,6 +868,13 @@ nav ul > li > ul > li > ul > li > a::after {
     margin-bottom: 27px;
 }
 
+@media (max-width: 1024px){
+    .blog-description {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 .blog-container {
     display: flex;
     gap: 45px;
